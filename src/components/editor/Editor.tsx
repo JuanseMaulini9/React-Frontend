@@ -2,13 +2,13 @@ import { Highlight, themes } from "prism-react-renderer";
 
 interface EditorProps {
   lenguage: string;
-  children: string;
+  solution: string;
 }
 
-export const Editor = ({ lenguage, children }: EditorProps) => {
+export const Editor = ({ lenguage, solution }: EditorProps) => {
   return (
     <Highlight
-      code={children}
+      code={solution}
       language={lenguage}
       theme={themes.shadesOfPurple}
     >
