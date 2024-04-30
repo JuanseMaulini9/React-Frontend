@@ -2,6 +2,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { login } from "../../services/authService";
 import { AxiosResponse } from "axios";
+import { useNavigate } from "react-router-dom";
 
 const loginSchema = Yup.object().shape({
   email: Yup.string()
@@ -16,6 +17,8 @@ export const LoginForm = () => {
     password: "",
   };
 
+  const navigate = useNavigate()
+
   return (
     <div>
       <h4>Login Form</h4>
@@ -27,13 +30,14 @@ export const LoginForm = () => {
             if(response.status === 200){
               if(response.data.token){
                 sessionStorage.setItem('sessionJWTToken', response.data.token)
+                navigate('/')
               }else {
                 throw new Error('Error generating: Invalid Token')
               }
             }else {
               throw new Error('Invalid Credentials')
             }
-          }).catch(error=> console.error(`[LOGIN ERROR]: Something went wrong: ${error}`))
+          }).catch(error => console.error(`[LOGIN ERROR]: Something went wrong: ${error}`))
         }}
       >
         {(formikProps) => (
