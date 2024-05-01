@@ -1,5 +1,6 @@
+import { Dashboard } from "../components/dashboard/Dashboard"
 export const HomePage = () => {
   return <div>
-    <h1>Home Page</h1>
+    <Dashboard></Dashboard>
   </div>
 }

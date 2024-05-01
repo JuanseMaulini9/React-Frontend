@@ -1,10 +1,9 @@
-import { RegisterForm } from "../components/forms/RegisterForm";
+import RegisterMUI from "../components/forms/RegisterMUI";
 
 export const RegisterPage = () => {
   return (
     <div>
-      <h1>Register Page</h1>
-      <RegisterForm></RegisterForm>
+      <RegisterMUI></RegisterMUI>
     </div>
   );
 };

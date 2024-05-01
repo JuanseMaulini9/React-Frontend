@@ -1,10 +1,9 @@
-import { LoginForm } from "../components/forms/LoginForm";
+import LoginMUI from "../components/forms/LoginMUI";
 
 export const LoginPage = () => {
   return (
     <div>
-      <h1>Login Page</h1>
-      <LoginForm></LoginForm>
+      <LoginMUI></LoginMUI>
     </div>
   );
 };
