@@ -21,6 +21,8 @@ import { Menu, ChevronLeft, Logout, Notifications } from "@mui/icons-material";
 
 import { MenuItems } from "./MenuItems";
 import { useState } from "react";
+import { NewEditor } from "../editor/NewEditor";
+
 
 const drawerWidth: number = 240;
 
@@ -173,10 +175,11 @@ export const Dashboard = () => {
                   flexDirection: "column",
                   height: 240,
                 }}
-              ></Paper>
+              >
+                <NewEditor/>
+          
+              </Paper>
             </Grid>
-
-
           </Container>
         </Box>
       </Box>
